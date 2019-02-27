@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+/* 共通のスタイル */
+body,html{
+	background-color: #f7fcfe;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+a{
+	color: #6a696c;
+	text-decoration: none;
+}
+
+a:hover{
+	opacity: 0.7;
+}
+
+a:after{
+	color: #6a696c;
+}
+
+p{
+	font-size: 14px;
+}
+
+li{
+	list-style-type: none;
+}
+
+
+
+
+.header{
+	position: sticky;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	/* background-color: pink; */
+	background-color: #f7fcfe;
+	z-index: 999;
+}
+
+.header ul{
+	display: flex;
+	margin-left: calc(100% - 200px);
+}
+
+.header ul li{
+	margin-top: 22px;
+	margin-left: 25px;
+}
+
+.header_sp{
+	display: none;
+}
+
+.main{
+	width: 100%;
+	display: flex;
+}
+
+.left_area{
+	width: 300px;
+	height: 100%;
+}
+
+.left{
+	/* background-color: purple; */
+	position: fixed;
+	width: 300px;
+	height: 100vh;
+}
+
+.logo{
+	width: 200px;
+	height: 115px;
+	margin-left: 25px;
+}
+
+.logo img{
+	width: 100%;
+	height: auto;
+}
+
+.nav_pc{
+	font-size: 14px;
+	margin-top: 80px;
+	margin-left: 36px;
+	line-height: 25px;
+}
+
+.nav_pc ul{}
+
+.nav_pc ul li{}
+
+.nav_pc ul li ul{
+	margin-left: 22px;
+}
+
+.nav_pc ul li ul li{}
+
+.right{
+	/* background-color: orange; */
+	width: calc(100% - 300px);
+	height: auto;
+}
+
+.mv_area{
+	width: 96%;
+	height: auto;
+	margin: 0 auto;
+	/* background: blue; */
+}
+
+.mv_area img{
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+
+.br{
+	width: 96%;
+	margin: 0 auto;
+	border-top: 1px solid #6a696c;
+	margin-top: 109px;
+}
+
+
+.new{}
+
+.new h1{
+	font-size: 15px;
+	text-align: center;
+	margin: 5% 0 1% 0;
+}
+
+.new p{
+	text-align: center;
+	font-size: 14px;
+}
+
+.n_i_list{
+	width: 99%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 0 auto;
+
+}
+
+.n_i_list img{
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+	margin-top: 10%;
+	margin-bottom: 6%;
+
+}
+
+.new_item img{
+	width: 339px;
+	height: 509px;
+}
+
+
+.new_item p{
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.footer{
+	width: 96%;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+	line-height: 30px;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+.f_box1{}
+
+.f_box2{}
+
+.f_box3{}
+
+.f_sns{
+	width: 10%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.f_sns i{
+	color: #000;
+}
+
+
+footer{
+	width: calc(100% - 330px);
+	text-align: right;
+	font-size: 11px;
+	color: #9D9D9D;
+	margin-left: 300px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########### 768px以下（スマホサイズ） ########### */
+@media (max-width: 768px) {
+
+
+	.box{
+		width: 100%;
+		height: 60px;
+		background-color: #f7fcfe;
+	}
+	.logo_sp{
+		width: 100px;
+		margin: 20px 25px;
+	}
+	.logo_sp img{
+		width: 100%;
+	}
+
+	/*################################# ハンバーガーボタン #################################*/
+	.header{
+		display: none;
+	}
+	.header_sp{
+	 	display: block;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 60px;
+	 	background-color: #f7fcfe;
+	 	z-index: 100;
+	 }
+	.header_hum {
+		display: block;
+	  	position: fixed;
+	  	top: 0;
+	  	left: 0;
+	  	width: 100%;
+	  	height: 60px;
+	  	/* background-color: #be9dc9; */
+	}
+
+
+	.header_icon_sp{
+		position: absolute;
+		top: 20px;
+		right: 0px;
+		width: 200px;
+		height: auto;
+		padding-top: ;
+	  	box-sizing: border-box;
+	  	z-index: 10000;
+	}
+
+	.header_icon_sp ul{
+		display: flex;
+	}
+
+	.header_icon_sp ul li{
+		margin-left: 16px;
+	}
+
+	 
+	.el_humburger {
+	  	position: absolute;
+	  	top: 18px;
+	  	right: 18px;
+	  	width: 26px;
+	  	height: auto;
+	  	padding-top: 1px;
+	  	box-sizing: border-box;
+	  	z-index: 10000;
+	  	transition: all 0.2s ease-in-out;
+	  	cursor: pointer;
+	  	pointer-events: auto;
+	}
+	 
+	.js_humburgerOpen .el_humburger {
+	}
+	 
+	.el_humburger > span {
+	  	display: block;
+	  	width: 100%;
+	  	margin: 0 auto 6px;
+	  	height: 3px;
+	  	background: #000;
+	  	transition: all 0.2s ease-in-out;
+	}
+	  &:last-child {
+	    	margin-bottom: 0;
+	  }
+	  .js_humburgerOpen & {
+	    	background: #000;
+	  }
+	 
+	.js_humburgerOpen .el_humburger > span.top {
+	  	transform: translateY(9px) rotate(-45deg);
+	}
+	 
+	.js_humburgerOpen .el_humburger > span.middle {
+	  	opacity: 0;
+	}
+	 
+	.js_humburgerOpen .el_humburger > span.bottom {
+	  	transform: translateY(-9px) rotate(45deg);
+	}
+	 
+	.el_humburgerButton.el_humburgerButton__close {
+	  	top: 2%;
+	  	right: 2%;
+	}
+	 
+	.el_humburgerButton__close > span {
+	  	display: block;
+	  	width: 35px;
+	  	margin: 0 auto;
+	  	height: 4px;
+	  	background: #fff;
+	}
+	 
+	.el_humburgerButton__close > span.el_humburgerLineTop {
+	  	transform: translateY(5px) rotate(-45deg);
+	}
+	 
+	.el_humburgerButton__close > span.el_humburgerLineBottom {
+	  	transform: translateY(-6px) rotate(45deg);
+	}
+	 
+	/*ナビゲーション*/
+	 
+	.navigation {
+	  	display: none;
+	}
+  	.js_appear {
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    	display: block;
+    	z-index: 9999;
+  	}
+	
+	 
+	.navigation_screen {
+	  	position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	bottom: 0;
+	  	right: 0;
+	  	/* background-color: rgba(255, 255, 255, 0.96); */
+	  	background-color: rgba(247, 252, 254, 0.96);
+	  	z-index: 0;
+	  	margin-top: 0px;
+	  	padding-top: 0px;
+	  	overflow: auto;
+	    -webkit-overflow-scrolling: touch;
+	}
+	 
+	.navigation_wrapper {
+	  	padding: 25% 0 0 0;
+	  	text-align: center;
+	  	line-height: 80px;
+	}
+	 
+	.navigation_item {
+	  	font-size: 18px;
+	  	margin-bottom: 20px;
+	}
+	 
+	.navigation_item > a {
+	  	color: #000;
+	  	text-decoration: none;
+	}
+	 
+	.js_fixed {
+	    position: fixed;
+	    width: 100%;
+	    height: 100%;
+	}
+
+	/*#############################################################################*/
+
+
+
+
+
+
+	.left_area{
+		display: none;
+	}
+
+	.right{
+		width: 100%;
+		height: auto;	
+	}
+
+	.mv_area{
+		width: 94%;
+	}
+
+	.n_i_list{}
+
+	.footer{
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.footer a{
+		font-size: 11px;
+	}
+
+	.f_sns{
+		width: 20%;
+		margin: 0 auto;
+	}
+
+
+	footer{
+		width: 100%;
+		text-align: center;
+		margin-left: 0;
+		margin-bottom: 5px;
+	}
+
+	footer p{
+		font-size: 9px;
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########### 599px以下 ########### */
+@media (max-width: 599px) {}
+
+
+
+/* ########### 600px以上～768px以下 ########### */
+@media (min-width: 600px) and (max-width: 768px) {}
+
+
+
+/* ########### 769px以上 ########### */
+@media (min-width: 769px) {}
+
+
+
+/* ########### 1000px以上 ########### */
+@media (min-width: 1000px) {}
+
+
